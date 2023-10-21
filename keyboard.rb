@@ -1,11 +1,10 @@
 class Keyboard < Formula
   desc "Get/Set keyboard brightness of Macbooks"
   homepage "https://github.com/oschrenk/keyboard.swift"
-  url "https://github.com/oschrenk/keyboard.swift/archive/0.1.tar.gz"
+  url "https://github.com/oschrenk/keyboard.swift/archive/v0.1.1.tar.gz"
   license "MIT"
-  sha256 "b1adbcde06f8ba1e49ac69dd4877218210e142eac53ac96931ea23357ee9028c"
+  sha256 "1d77c277663a502cddccdebf56ad1711b9aecc45a49eb6194c57c6477c3a8873"
   head "https://github.com/oschrenk/keyboard.swift", branch: "main"
-
 
   def install
     system "swift", "build",
