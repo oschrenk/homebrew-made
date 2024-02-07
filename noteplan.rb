@@ -3,20 +3,20 @@ class Noteplan < Formula
   homepage "https://github.com/oschrenk/noteplan"
   license "APL"
   head "https://github.com/oschrenk/noteplan", branch: "main"
-  version "0.2.1"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oschrenk/noteplan/releases/download/v0.2.1/noteplan-darwin-amd64"
-      sha256 "c37f46d64d705993ed9f416d449ad72b15416cd017eab9676af978c503ca14e9"
+      url "https://github.com/oschrenk/noteplan/releases/download/v0.2.3/noteplan-darwin-amd64"
+      sha256 "f535c1e7bfc3f0bb5a72aa7b3439d06b7568358c9b2f775caae0868b12207f61"
 
       def install
         bin.install "noteplan-darwin-amd64" => "noteplan"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oschrenk/noteplan/releases/download/v0.2.1/noteplan-darwin-arm64"
-      sha256 "5a1e5d16334b2e90d87a5590d27bd011021573895cdda9e9da9f0d52126278d5"
+      url "https://github.com/oschrenk/noteplan/releases/download/v0.2.3/noteplan-darwin-arm64"
+      sha256 "9e2b44dbbddd525ba05a070edf16788793593ff6fff641b920f43599d17dbf05"
 
       def install
         bin.install "noteplan-darwin-arm64" => "noteplan"
