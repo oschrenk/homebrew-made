@@ -2,23 +2,22 @@ class Sessionizer < Formula
   desc "Tmux session manager"
   homepage "https://github.com/oschrenk/sessionizer"
   license "APL"
-  head "https://github.com/oschrenk/sessionizer/releases/tag/v0.2", branch: "main"
+  head "https://github.com/oschrenk/sessionizer/releases/tag/v0.4", branch: "main"
+  version "0.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/oschrenk/sessionizer/releases/download/v0.2/sessionizer-darwin-arm64"
-      sha256 "94537b5fac7e8830f6869242824b9646897acc9c56bde069638f2c1624c51b43"
-
-      def install
-        bin.install "sessionizer-darwin-arm64" => "sessionizer"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/oschrenk/sessionizer/releases/download/v0.2/sessionizer-darwin-amd64"
-      sha256 "9bd05d2e4cf3027f528374debb23fd679ebf6f858fe4efcba1a7c23144cc7496"
-
+      url "https://github.com/oschrenk/sessionizer/releases/download/v0.4/sessionizer-darwin-amd64"
+      sha256 "0f21050876b0be7629fd8beb71ff68420cb923fe4a32c1b0d154090ce3241c41"
       def install
         bin.install "sessionizer-darwin-amd64" => "sessionizer"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/oschrenk/sessionizer/releases/download/v0.4/sessionizer-darwin-arm64"
+      sha256 "923db5a03363e64b95dd2983aa86dfa3ec499ad68ec39b6898d6ed4309a743b2"
+      def install
+        bin.install "sessionizer-darwin-arm64" => "sessionizer"
       end
     end
   end
