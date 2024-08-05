@@ -3,20 +3,20 @@ class Mission < Formula
   homepage "https://github.com/oschrenk/mission"
   license "APL"
   head "https://github.com/oschrenk/mission", branch: "main"
-  version "0.4.1"
+  version "0.4.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oschrenk/mission/releases/download/v0.4.1/mission-darwin-amd64"
-      sha256 "8e1575a3eda1bf4422c3b6fbb8ba2045082c40eba46a32ceb029a6592fd05f76"
+      url "https://github.com/oschrenk/mission/releases/download/v0.4.2/mission-darwin-amd64"
+      sha256 "0e8a488ba620cf01fe595bd5b50f5eda1f1083cc52de10f05c0449206824ff09"
 
       def install
         bin.install "mission-darwin-amd64" => "mission"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oschrenk/mission/releases/download/v0.4.1/mission-darwin-arm64"
-      sha256 "e001903068e61cca1f336087a398b962c765a788b1550ab142c1c0d9d013e3a7"
+      url "https://github.com/oschrenk/mission/releases/download/v0.4.2/mission-darwin-arm64"
+      sha256 "96592458237a236b6d9529090dba01784daefa9414b1d44844619f2a7789011e"
 
       def install
         bin.install "mission-darwin-arm64" => "mission"
