@@ -1,4 +1,4 @@
-class cutter < Formula
+class Cutter < Formula
   desc "Extract cookies (from Safari)"
   homepage "https://github.com/oschrenk/cutter"
   license "MIT"
