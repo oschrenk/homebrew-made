@@ -1,7 +1,7 @@
 class cutter < Formula
   desc "Extract cookies (from Safari)"
   homepage "https://github.com/oschrenk/cutter"
-  license "APL"
+  license "MIT"
   head "https://github.com/oschrenk/cutter", branch: "main"
   version "0.1.0"
 
