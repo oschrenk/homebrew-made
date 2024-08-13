@@ -2,7 +2,7 @@ class Sessionizer < Formula
   desc "Tmux session manager"
   homepage "https://github.com/oschrenk/sessionizer"
   license "APL"
-  head "https://github.com/oschrenk/sessionizer/releases/tag/v0.6", branch: "main"
+  head "https://github.com/oschrenk/sessionizer", branch: "main"
   version "0.7"
 
   on_macos do
