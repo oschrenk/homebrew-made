@@ -3,12 +3,12 @@ class Plan < Formula
   homepage "https://github.com/oschrenk/plan.swift"
   license "MIT"
   head "https://github.com/oschrenk/plan.swift", branch: "main"
-  version "0.8.4"
+  version "0.8.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/oschrenk/plan.swift/releases/download/v0.8.4/plan-darwin-arm64"
-      sha256 "6a4a5f3f6bdebb0a833045383c3ff67a018da1969d70b5e24a8fe1f5203032a3"
+      url "https://github.com/oschrenk/plan.swift/releases/download/v0.8.5/plan-darwin-arm64"
+      sha256 "e3a3df62559fb73710a3087be8cf19fd652145256b08cb456edbbab6421082a2"
 
       def install
         bin.install "plan-darwin-arm64" => "plan"
