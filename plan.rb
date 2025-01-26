@@ -8,7 +8,7 @@ class Plan < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/oschrenk/plan.swift/releases/download/v#{version}/plan-darwin-arm64"
-      sha256 "dba2336825d66b73af66ed7dc4d0146ff2a528d211c83ef8bdb5a103b1aa8d65"
+      sha256 "ba8852b557b296846dcd78a272434f9585eeaab1eb90237cc223fdb434f36c3f"
 
       def install
         bin.install "plan-darwin-arm64" => "plan"
