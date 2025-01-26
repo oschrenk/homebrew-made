@@ -25,10 +25,9 @@ class Mission < Formula
   end
 
   service do
-    run ["#{opt_bin}/mission", "watch"]
+    run [opt_bin/"mission", "watch"]
     keep_alive true
-    process_type :interactive
-    log_path "#{var}/log/mission/mission.out.log"
-    error_log_path "#{var}/log/mission/mission.err.log"
+    log_path var/"log/mission.out.log"
+    error_log_path var/"log/mission.err.log"
   end
 end
