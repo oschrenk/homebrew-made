@@ -17,10 +17,9 @@ class Plan < Formula
   end
 
   service do
-    run ["#{opt_bin}/plan", "watch"]
+    run [opt_bin/"plan", "watch"]
     keep_alive true
-    process_type :interactive
-    log_path "#{var}/log/plan/plan.out.log"
-    error_log_path "#{var}/log/plan/plan.err.log"
+    log_path var/"log/plan.log"
+    error_log_path var/"log/plan.log"
   end
 end
