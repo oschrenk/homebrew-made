@@ -15,11 +15,4 @@ class Plan < Formula
       end
     end
   end
-
-  service do
-    run [opt_bin/"plan", "watch"]
-    keep_alive true
-    log_path var/"log/plan.log"
-    error_log_path var/"log/plan.log"
-  end
 end
