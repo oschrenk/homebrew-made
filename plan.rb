@@ -7,7 +7,7 @@ class Plan < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/oschrenk/plan.swift/releases/download/v#{version}/plan-0.12.4.tar.gz"
+      url "https://github.com/oschrenk/plan.swift/releases/download/v#{version}/plan-#{version}.tar.gz"
       sha256 "5bbfa708f38c0377eca91bf549d6067b42e19b0b2bf14f81f7d0ae0b20d5760e"
 
       def install
