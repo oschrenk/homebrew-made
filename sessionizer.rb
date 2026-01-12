@@ -3,19 +3,19 @@ class Sessionizer < Formula
   homepage "https://github.com/oschrenk/sessionizer"
   license "MIT"
   head "https://github.com/oschrenk/sessionizer", branch: "main"
-  version "0.8.0"
+  version "0.9.0"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/oschrenk/sessionizer/releases/download/v#{version}/sessionizer-darwin-amd64"
-      sha256 "ad1b99c19a5b7de41680e37953e9a3650ebe0798399e40e62e7ad3db3363f63f"
+      sha256 "c013151892373cfd32725f3e8d35c57f47872d01ece9a2f43a981864c66e7008"
       def install
         bin.install "sessionizer-darwin-amd64" => "sessionizer"
       end
     end
     if Hardware::CPU.arm?
       url "https://github.com/oschrenk/sessionizer/releases/download/v#{version}/sessionizer-darwin-arm64"
-      sha256 "d9ac8a459ec35a8a3d160a603bcaa6a2aac5e8d4085ad2e952e2fce2d81322e9"
+      sha256 "61f4541fa8cea885d5990989f0ebdb018d7746a8728512237922758e2535b33a"
       def install
         bin.install "sessionizer-darwin-arm64" => "sessionizer"
       end
