@@ -11,5 +11,6 @@ class Keyboard < Formula
         "--configuration", "release",
         "--disable-sandbox"
     bin.install '.build/release/keyboard'
+    generate_completions_from_executable(bin/"keyboard", "--generate-completion-script")
   end
 end
