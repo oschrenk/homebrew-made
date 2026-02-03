@@ -13,6 +13,7 @@ class Infuse < Formula
       def install
         chmod "+x", "infuse-darwin-arm64"
         bin.install "infuse-darwin-arm64" => "infuse"
+        generate_completions_from_executable(bin/"infuse", shell_parameter_format: :cobra)
       end
     end
   end

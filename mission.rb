@@ -10,7 +10,9 @@ class Mission < Formula
       url "https://github.com/oschrenk/mission/releases/download/v#{version}/mission-darwin-amd64"
       sha256 "892e4f720ecee5917799af4cc5f83f26f2d616029c3711be8557bd74bb7beb15"
       def install
+        chmod "+x", "mission-darwin-amd64"
         bin.install "mission-darwin-amd64" => "mission"
+        generate_completions_from_executable(bin/"mission", shell_parameter_format: :cobra)
       end
     end
     if Hardware::CPU.arm?
@@ -18,7 +20,9 @@ class Mission < Formula
       sha256 "70891844cee18e19b7893f9834e64e8afbb9a20b7b8561a3cbf4647de3eda900"
 
       def install
+        chmod "+x", "mission-darwin-arm64"
         bin.install "mission-darwin-arm64" => "mission"
+        generate_completions_from_executable(bin/"mission", shell_parameter_format: :cobra)
       end
     end
   end
