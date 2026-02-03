@@ -13,7 +13,7 @@ class Arbol < Formula
       def install
         chmod "+x", "arbol-darwin-arm64"
         bin.install "arbol-darwin-arm64" => "arbol"
-        generate_completions_from_executable(bin/"arbol", "completion", shells: [:fish])
+        generate_completions_from_executable(bin/"arbol", shell_parameter_format: :cobra)
       end
     end
   end
