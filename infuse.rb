@@ -3,12 +3,12 @@ class Infuse < Formula
   homepage "https://github.com/oschrenk/infuse"
   license "MIT"
   head "https://github.com/oschrenk/infuse", branch: "main"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/oschrenk/infuse/releases/download/v#{version}/infuse-darwin-arm64"
-      sha256 "9714db57d083e7b6bb1b03388ff544e1381bf770a9c6764c49742802040eab15"
+      sha256 "829d4d9fa00a892e3c1cb0a2dec8ad88d67c2b3f33f9a2c33b5467bfecafe857"
 
       def install
         chmod "+x", "infuse-darwin-arm64"
