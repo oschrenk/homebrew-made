@@ -26,14 +26,25 @@ class Team < Formula
     end
   end
 
+  service do
+    run [opt_bin/"team", "server"]
+    keep_alive true
+    log_path var/"log/team.out.log"
+    error_log_path var/"log/team.err.log"
+  end
+
   def caveats
     <<~EOS
-      Run once to set up the launchd user agent that runs the bus:
+      Start the bus:
 
-        team service install
+        brew services start team
 
       Then install the Claude Code skill (see install docs for plugin vs
       standalone options): https://github.com/oschrenk/team/blob/main/docs/install.md
+
+      Alternative (no brew services): run `team service install` to set up
+      a self-managed launchd agent. Do not run both — they'd conflict on
+      port 9473.
     EOS
   end
 
