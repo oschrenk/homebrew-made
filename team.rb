@@ -3,12 +3,12 @@ class Team < Formula
   homepage "https://github.com/oschrenk/team"
   license "MIT"
   head "https://github.com/oschrenk/team.git", branch: "main"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/oschrenk/team/releases/download/#{version}/team-darwin-amd64"
-      sha256 "f89febaf7987253e6997f54e4ce0360a7c43a1b29596897faa7aa10fb5f4e74d"
+      sha256 "6472a7722c05595a13a9a0c2d9a3bc61613d918dcc0aa1431c4a4ecf522a7abe"
       def install
         chmod "+x", "team-darwin-amd64"
         bin.install "team-darwin-amd64" => "team"
@@ -17,7 +17,7 @@ class Team < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/oschrenk/team/releases/download/#{version}/team-darwin-arm64"
-      sha256 "f7276d5e5806733250b2d783eebca6cf911fe6f98487ea06709d8583bab33aba"
+      sha256 "4d1e85582e1af9ddfacc1506c4a8623822248c37d48999e01077dc28cb0d8ef1"
       def install
         chmod "+x", "team-darwin-arm64"
         bin.install "team-darwin-arm64" => "team"
