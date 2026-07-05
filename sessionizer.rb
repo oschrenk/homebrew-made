@@ -3,12 +3,12 @@ class Sessionizer < Formula
   homepage "https://github.com/oschrenk/sessionizer"
   license "MIT"
   head "https://github.com/oschrenk/sessionizer", branch: "main"
-  version "0.12.1"
+  version "0.12.2"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/oschrenk/sessionizer/releases/download/v#{version}/sessionizer-darwin-amd64"
-      sha256 "05511750a7923aed765292ab32f4b71742c53f01d70889f1f0f652148ebde39c"
+      sha256 "2cc500190a925a568393878c4e209c9569645e2637f9fa47ad60ce1d16870c8c"
       def install
         chmod "+x", "sessionizer-darwin-amd64"
         bin.install "sessionizer-darwin-amd64" => "sessionizer"
@@ -17,7 +17,7 @@ class Sessionizer < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/oschrenk/sessionizer/releases/download/v#{version}/sessionizer-darwin-arm64"
-      sha256 "df4462c3fba4bd11ac43e598bb1783ffdde4b2ef456afdf83eadad050b4fe00c"
+      sha256 "4b4a07832adc5c03eacc1efd7f589323c7beeaa50a0b2f369ecca30787108e02"
       def install
         chmod "+x", "sessionizer-darwin-arm64"
         bin.install "sessionizer-darwin-arm64" => "sessionizer"
