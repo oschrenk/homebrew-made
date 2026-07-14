@@ -3,12 +3,12 @@ class Arbol < Formula
   homepage "https://github.com/oschrenk/arbol"
   license "MIT"
   head "https://github.com/oschrenk/arbol", branch: "main"
-  version "0.2.1"
+  version "0.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/oschrenk/arbol/releases/download/v#{version}/arbol-darwin-arm64"
-      sha256 "edb185c552db6e2e3c42e4aa0879e8a86700bf43d856ac1674878ab2f5f606af"
+      sha256 "812d7b0e06523c3439cebb8bde79cba389b1ee319b188136151aa690070e39f1"
 
       def install
         chmod "+x", "arbol-darwin-arm64"
